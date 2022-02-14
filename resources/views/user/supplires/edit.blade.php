@@ -1,14 +1,15 @@
 @extends('layouts.main')
 @section('title')
-    <title>Add Supplier</title>
+    <title>Edit Supplier</title>
 @endsection
 @section('main-content')
     <div class="container-fluid mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <h4 class="text-center">Add New Supplier</h4>
+                <h4 class="text-center">Edit Supplier</h4>
                 <form action="{{route('supplier.store')}}" method="post">
                     @csrf
+
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
                         <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}" required>

@@ -33,8 +33,8 @@
                             Suppliers
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="suppliers">
-                            <li><a class="dropdown-item" href="#">Add Supplier</a></li>
-                            <li><a class="dropdown-item" href="#">Manage Suppliers</a></li>
+                            <li><a class="dropdown-item" href="{{route('supplier.create')}}">Add Supplier</a></li>
+                            <li><a class="dropdown-item" href="{{route('supplier.index')}}">Manage Suppliers</a></li>
                         </ul>
                     </li>
 
