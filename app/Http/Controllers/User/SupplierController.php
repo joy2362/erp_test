@@ -7,6 +7,7 @@ use App\Models\Country;
 use App\Models\Supplier;
 use Illuminate\Http\Request;
 
+
 class SupplierController extends Controller
 {
     /**
@@ -67,7 +68,9 @@ class SupplierController extends Controller
             'city_id'=>$request->city,
         ]);
 
-        return back();
+        toast('Supplier Create Successfully!','success');
+
+        return redirect()->route('supplier.index');
     }
 
     /**
@@ -133,7 +136,9 @@ class SupplierController extends Controller
             $supplier->city_id = $request->city;
         }
         $supplier->save();
-        return back();
+
+        toast('Supplier Updated Successfully!','success');
+        return redirect()->route('supplier.index');
     }
 
     /**

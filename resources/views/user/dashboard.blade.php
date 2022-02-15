@@ -7,7 +7,7 @@
        <div class="row">
             <div class="col-md-12">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="card border-success m-3  text-center" >
                             <div class="card-header">User</div>
                             <div class="card-body text-success">
@@ -16,7 +16,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="card border-success m-3 text-center" >
                             <div class="card-header">Customer</div>
                             <div class="card-body text-success">
@@ -25,12 +25,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="card border-success m-3 text-center" >
                             <div class="card-header">Supplier</div>
                             <div class="card-body text-success">
                                 <h5 class="card-title">No of Suppliers</h5>
                                 <p class="card-text">{{$noOfSupplier}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card border-success m-3 text-center" >
+                            <div class="card-header">Shopify Product</div>
+                            <div class="card-body text-success">
+                                <h5 class="card-title">No of Shopify Product</h5>
+                                <p class="card-text">{{$noOfProduct}}</p>
                             </div>
                         </div>
                     </div>

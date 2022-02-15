@@ -66,6 +66,7 @@ class CustomerController extends Controller
            'state_id'=>$request->state,
            'city_id'=>$request->city,
         ]);
+        toast('Customer Create Successfully!','success');
 
         return redirect()->route('customer.index');
     }

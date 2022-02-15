@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\User\CustomerController;
 use App\Http\Controllers\User\HomeController;
+use App\Http\Controllers\User\ProductController;
 use App\Http\Controllers\User\SupplierController;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
@@ -23,9 +24,7 @@ Route::get('/', [HomeController::class,"index"])->name('home');
 Route::get('/users/manage', [UserController::class,"index"])->name('user.manage');
 
 //customer
-Route::get('/customer/create', [CustomerController::class,"create"])->name('customer.create');
-Route::post('/customer/store', [CustomerController::class,"store"])->name('customer.store');
-Route::get('/customer/index', [CustomerController::class,"index"])->name('customer.index');
+Route::resource('customer', CustomerController::class);
 
 //supplier resource
 Route::resource('supplier', SupplierController::class);
@@ -33,3 +32,6 @@ Route::resource('supplier', SupplierController::class);
 //fetch state and city
 Route::get('/state/fetch/{country}', [CustomerController::class,"fetchState"]);
 Route::get('/city/fetch/{state}', [CustomerController::class,"fetchCity"]);
+
+//show product page
+Route::get('/product', [ProductController::class,"index"])->name('product.index');
