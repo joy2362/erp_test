@@ -50,7 +50,7 @@
                 </ul>
 
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown ">
+                    <li class="nav-item dropdown dropstart">
                         <a class="nav-link dropdown-toggle" href="#" id="users" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                            @if(auth()->user())
                             {{auth()->user()->name}}

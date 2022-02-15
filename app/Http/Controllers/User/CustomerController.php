@@ -12,6 +12,12 @@ use Illuminate\Http\Request;
 class CustomerController extends Controller
 {
     /**
+     *
+     */
+    public function __construct(){
+        $this->middleware('auth');
+    }
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response

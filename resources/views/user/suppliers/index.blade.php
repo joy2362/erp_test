@@ -33,7 +33,7 @@
                             <td>{{$row->country->country_name}}</td>
                             <td>{{$row->state->state_name}}</td>
                             <td>{{$row->city->city_name}}</td>
-                            <td><button type="button" class="btn btn-success">Edit</button>
+                            <td><a type="button" href="{{route('supplier.edit',$row->id)}}" class="btn btn-success">Edit</a>
                             </td>
                         </tr>
                     @endforeach

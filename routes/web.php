@@ -27,10 +27,8 @@ Route::get('/customer/create', [CustomerController::class,"create"])->name('cust
 Route::post('/customer/store', [CustomerController::class,"store"])->name('customer.store');
 Route::get('/customer/index', [CustomerController::class,"index"])->name('customer.index');
 
-//supplier
-Route::get('/supplier/create', [SupplierController::class,"create"])->name('supplier.create');
-Route::post('/supplier/store', [SupplierController::class,"store"])->name('supplier.store');
-Route::get('/supplier/index', [SupplierController::class,"index"])->name('supplier.index');
+//supplier resource
+Route::resource('supplier', SupplierController::class);
 
 //fetch state and city
 Route::get('/state/fetch/{country}', [CustomerController::class,"fetchState"]);
